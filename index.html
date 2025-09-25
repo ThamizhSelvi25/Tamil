@@ -3,81 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Login Page with Background Image</title>
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      background: #f4f6f9;
+    }
+    body {
+      height: 100vh;
+      background: url("background.jpg") no-repeat center center/cover; /* Change your image file here */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
-
-    .login-container {
-      background: #ffffff;
+    .login-box {
+      background: rgba(255, 255, 255, 0.9);
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-
-    .login-container h2 {
+      border-radius: 12px;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+      width: 320px;
       text-align: center;
+    }
+    .login-box img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .login-box h2 {
       margin-bottom: 20px;
       color: #333;
     }
-
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
+    .login-box input {
       width: 100%;
-      padding: 10px;
-      margin: 8px 0;
+      padding: 12px;
+      margin: 10px 0;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 8px;
+      font-size: 14px;
     }
-
-    .login-container input[type="submit"] {
+    .login-box button {
       width: 100%;
-      padding: 10px;
-      background: #4CAF50;
+      padding: 12px;
+      background: #2575fc;
+      color: #fff;
       border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
     }
-
-    .login-container input[type="submit"]:hover {
-      background: #45a049;
+    .login-box button:hover {
+      background: #1a5ed1;
     }
-
-    .login-container p {
-      text-align: center;
+    .login-box p {
       margin-top: 15px;
       font-size: 14px;
     }
-
-    .login-container a {
-      color: #4CAF50;
+    .login-box a {
+      color: #2575fc;
       text-decoration: none;
+    }
+    .login-box a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-  <div class="login-container">
+  <div class="login-box">
+    <!-- Add logo image here if you want -->
+    <img src="clg.jpg" alt="Logo">
+    
     <h2>Login</h2>
-    <form action="https://formspree.io/f/mnngnpyk"method="post">
+    <form action="#" method="post">
       <input type="text" name="username" placeholder="Enter Username" required>
       <input type="password" name="password" placeholder="Enter Password" required>
-      <input type="submit" value="Login">
+      <button type="submit">Login</button>
     </form>
-    <p>Don’t have an account? <a href="register.html">Sign Up</a></p>
+    <p>Don't have an account? <a href="#">Sign Up</a></p>
   </div>
-
 </body>
 </html>
-
-
-
